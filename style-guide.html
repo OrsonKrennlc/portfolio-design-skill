@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="guide.title">风格图谱 · Junyang Shen</title>
+    <meta name="description" content="Junyang Shen 作品集的视觉语言、组件与 Web 设计说明。" data-i18n-content="guide.meta">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Caveat:wght@700&family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Serif+Tibetan:wght@200;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/architect.css">
+    <link rel="stylesheet" href="css/tools.css">
+    <link rel="stylesheet" href="css/style-guide.css">
+</head>
+<body class="style-guide">
+    <a class="sg-skip" href="#main" data-i18n="guide.skip">跳到主要内容</a>
+    <header class="site-header">
+        <div class="logo">Junyang Shen</div>
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false"
+            aria-controls="site-header-panel" aria-label="打开导航菜单" data-i18n-aria-label="nav.openMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+        <div class="header-controls" id="site-header-panel">
+            <nav class="main-nav" aria-label="主导航" data-i18n-aria-label="nav.main">
+                <a href="index.html#home" data-i18n="nav.home">主页</a>
+                <a href="architect.html" data-i18n="nav.architecture">建筑</a>
+                <a href="index.html#projects" data-i18n="nav.uiux">交互</a>
+                <a href="index.html#projects" data-i18n="nav.photography">摄影</a>
+                <a href="tools.html" data-i18n="nav.tools">小工具集</a>
+            <a data-i18n="guide.nav" href="style-guide.html" class="active" aria-current="page">风格</a></nav>
+            <div class="language-switcher" role="group" aria-label="语言切换"
+                data-i18n-aria-label="language.switcher">
+                <button type="button" data-locale="zh" aria-pressed="true" aria-label="切换为中文"
+                    data-i18n-aria-label="language.zh">中</button>
+                <span aria-hidden="true">/</span>
+                <button type="button" data-locale="en" aria-pressed="false" aria-label="切换为英文"
+                    data-i18n-aria-label="language.en">EN</button>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="sg-main" tabindex="-1">
+        <div class="sg-container">
+            <section class="sg-cover" aria-labelledby="guide-title">
+                <div class="sg-cover-copy">
+                    <p class="sg-edition" lang="en">PORTFOLIO / STYLE ATLAS / 2026</p>
+                    <h1 id="guide-title" data-i18n="guide.hero">作品集风格图谱</h1>
+                    <p class="sg-lead" data-i18n="guide.lead">以影像展开叙事，以文字建立秩序。</p>
+                    <a class="sg-text-link" href="docs/STYLE_GUIDE.md" data-i18n="guide.read">阅读风格说明 ↗</a>
+                </div>
+                <figure class="sg-cover-image">
+                    <img src="assets/images/hero-bg-uncropped.jpeg" width="900" height="1100" fetchpriority="high" alt="山脊、云雾与层叠的远山" data-i18n-alt="guide.mountainAlt">
+                    <figcaption><span lang="en">01 / LANDSCAPE</span><span data-i18n="hero.location">中国·四川·阿坝</span></figcaption>
+                </figure>
+            </section>
+            <nav class="sg-index" aria-label="样例章节索引" data-i18n-aria-label="guide.indexLabel">
+                <a href="#colors"><span class="sg-number">01</span><span data-i18n="guide.colors">色彩与对比</span><span aria-hidden="true">↗</span></a>
+                <a href="#type"><span class="sg-number">02</span><span data-i18n="guide.type">字体与层级</span><span aria-hidden="true">↗</span></a>
+                <a href="#layout"><span class="sg-number">03</span><span data-i18n="guide.layout">布局与尺度</span><span aria-hidden="true">↗</span></a>
+                <a href="#imagery"><span class="sg-number">04</span><span data-i18n="guide.imagery">影像与叙事</span><span aria-hidden="true">↗</span></a>
+                <a href="#components"><span class="sg-number">05</span><span data-i18n="guide.components">内容组件</span><span aria-hidden="true">↗</span></a>
+                <a href="#controls"><span class="sg-number">06</span><span data-i18n="guide.controls">控件与状态</span><span aria-hidden="true">↗</span></a>
+                <a href="#interaction"><span class="sg-number">07</span><span data-i18n="guide.interaction">交互与画廊</span><span aria-hidden="true">↗</span></a>
+                <a href="#web"><span class="sg-number">08</span><span data-i18n="guide.web">Web 设计要求</span><span aria-hidden="true">↗</span></a>
+            </nav>
+            <section class="sg-section" id="colors" aria-labelledby="colors-title">
+                <div class="sg-heading"><span class="sg-number">01</span><h2 id="colors-title" data-i18n="guide.colors">色彩与对比</h2></div>
+                <p class="sg-intro" data-i18n="guide.colorsIntro">黑、白与一个深绿色，区分阅读层级。</p>
+                <div class="sg-palette">
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--brand" aria-hidden="true"></div><code>#02542D</code><span data-i18n="guide.colorBrand">品牌 / 重点</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--ink" aria-hidden="true"></div><code>#000000</code><span data-i18n="guide.colorInk">主文字 / 暗底</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--canvas" aria-hidden="true"></div><code>#FFFFFF</code><span data-i18n="guide.colorCanvas">页面画布</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--muted" aria-hidden="true"></div><code>#676767</code><span data-i18n="guide.colorMuted">次级正文</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--subtle" aria-hidden="true"></div><code>#808080</code><span data-i18n="guide.colorSubtle">旧版辅助色</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--line" aria-hidden="true"></div><code>#EAEAEA</code><span data-i18n="guide.colorLine">装饰分隔线</span></div>
+                    <div class="sg-color"><div class="sg-swatch sg-swatch--inverse" aria-hidden="true"></div><code>#D0D0D0</code><span data-i18n="guide.colorInverse">暗底次级文字</span></div>
+                </div>
+                <div class="sg-pair-grid"><p class="sg-pair" data-i18n="guide.lightPair">白底文字清晰，深绿承担强调。</p><p class="sg-pair sg-inverse" data-i18n="guide.darkPair">黑底文字留有层次，灰色承接叙述。</p></div>
+                <p class="sg-note" data-i18n="guide.contrastNote">#808080 保留为色板参考。小字使用 #676767；#EAEAEA 只作装饰分隔。</p>
+            </section>
+            <section class="sg-section" id="type" aria-labelledby="type-title">
+                <div class="sg-heading"><span class="sg-number">02</span><h2 id="type-title" data-i18n="guide.type">字体与层级</h2></div>
+                <p class="sg-intro" data-i18n="guide.typeIntro">四种字体，各自承担明确的角色。</p>
+                <div class="sg-type-list">
+                    <div><code>Noto Serif SC / 48</code><p class="sg-type-zh" lang="zh-CN">于方寸之间<br>见万千气象。</p></div>
+                    <div><code>Anonymous Pro / 48</code><p class="sg-type-en" lang="en">Space.<br>Light. Form.</p></div>
+                    <div><code>Caveat / 48</code><p class="sg-signature" lang="en">Junyang Shen</p></div>
+                    <div><code>Noto Serif Tibetan / 28</code><p class="sg-tibetan" lang="bo">རི་མཐོན་ཆུ་རྒྱང་།</p><p class="sg-note" data-i18n="guide.tibetanCaption">藏文原文，用于地域语境。</p></div>
+                </div>
+                <div class="sg-type-scale">
+                    <div><code>48 / 32</code><p class="sg-scale-display" data-i18n="guide.typeDisplay">章节标题</p></div>
+                    <div><code>32 / 26</code><p class="sg-scale-heading" data-i18n="guide.typeHeading">作品的名称与主题</p></div>
+                    <div><code>16 / 1.8</code><p class="sg-scale-body" data-i18n="guide.typeBody">正文以完整、自然的句子说明设计。留出足够行距，让文字与图像共同构成阅读节奏。</p></div>
+                    <div><code>14 / 1.5</code><p class="sg-scale-meta" data-i18n="guide.typeMeta">项目时间 · 地点 · 功能类型</p></div>
+                </div>
+            </section>
+            <section class="sg-section" id="layout" aria-labelledby="layout-title">
+                <div class="sg-heading"><span class="sg-number">03</span><h2 id="layout-title" data-i18n="guide.layout">布局与尺度</h2></div>
+                <p class="sg-intro" data-i18n="guide.layoutIntro">用容器与间距组织信息，边界保持轻盈。</p>
+                <div class="sg-layout-demo"><div class="sg-ruler"><code>1200px</code><span data-i18n="guide.container">标准内容容器</span></div><div class="sg-column-demo"><div><code>720px</code><span data-i18n="guide.textColumn">长文阅读宽度</span></div><div data-i18n="guide.metaColumn">图像 / 元数据</div></div></div>
+                <div class="sg-space-scale" aria-label="间距刻度，单位像素" data-i18n-aria-label="guide.spaceLabel"><div class="sg-space sg-space--4"><span aria-hidden="true"></span><code>4</code></div><div class="sg-space sg-space--8"><span aria-hidden="true"></span><code>8</code></div><div class="sg-space sg-space--12"><span aria-hidden="true"></span><code>12</code></div><div class="sg-space sg-space--16"><span aria-hidden="true"></span><code>16</code></div><div class="sg-space sg-space--20"><span aria-hidden="true"></span><code>20</code></div><div class="sg-space sg-space--24"><span aria-hidden="true"></span><code>24</code></div><div class="sg-space sg-space--32"><span aria-hidden="true"></span><code>32</code></div><div class="sg-space sg-space--40"><span aria-hidden="true"></span><code>40</code></div><div class="sg-space sg-space--48"><span aria-hidden="true"></span><code>48</code></div><div class="sg-space sg-space--60"><span aria-hidden="true"></span><code>60</code></div><div class="sg-space sg-space--80"><span aria-hidden="true"></span><code>80</code></div><div class="sg-space sg-space--100"><span aria-hidden="true"></span><code>100</code></div><div class="sg-space sg-space--120"><span aria-hidden="true"></span><code>120</code></div><div class="sg-space sg-space--150"><span aria-hidden="true"></span><code>150</code></div></div>
+                <div class="sg-surface-grid"><div class="sg-surface sg-surface--image"><code>4px</code><span data-i18n="guide.radiusImage">图片圆角</span></div><div class="sg-surface sg-surface--modal"><code>16px</code><span data-i18n="guide.radiusModal">地图与桌面弹窗</span></div><div class="sg-surface sg-surface--hover"><code>0 15px 40px / 10%</code><span data-i18n="guide.shadow">悬停与层级抬升</span></div></div>
+            </section>
+            <section class="sg-section" id="imagery" aria-labelledby="imagery-title">
+                <div class="sg-heading"><span class="sg-number">04</span><h2 id="imagery-title" data-i18n="guide.imagery">影像与叙事</h2></div>
+                <p class="sg-intro" data-i18n="guide.imageryIntro">真实影像、五层叠字与黑白章节，形成首页的叙事节奏。</p>
+                <div class="sg-story">
+                    <div class="sg-landscape"><div class="sg-echo" lang="la"><span aria-hidden="true">Per Aspera ad astra.</span><span aria-hidden="true">Per Aspera ad astra.</span><span>Per Aspera ad astra.</span><span aria-hidden="true">Per Aspera ad astra.</span><span aria-hidden="true">Per Aspera ad astra.</span></div><button class="scroll-down sg-story-arrow" type="button" data-scroll-story aria-label="查看暗色介绍样例" data-i18n-aria-label="guide.scrollStory"><img src="assets/images/vector.svg" width="51" height="17" alt=""></button></div>
+                    <div class="sg-dark-about" id="story-about"><img src="assets/images/about-654249.png" width="568" height="568" alt="沈俊阳站在雪山前举手迎向阳光" data-i18n-alt="about.imageAlt" loading="lazy"><div><h3 data-i18n="about.name">沈俊阳</h3><p data-i18n="about.tags">零零后 / 建筑设计 / 交互设计 / 摄影 / 电影</p><p data-i18n="about.statement">于方寸之间，见万千气象。</p></div></div>
+                    <blockquote class="sg-quote"><p data-i18n="guide.quote">留白也是内容。</p><cite data-i18n="guide.quoteSource">作品集排版原则</cite></blockquote>
+                </div>
+                <div class="sg-category-grid">
+                    <a class="project-card project-card--photography" href="index.html#projects"><div class="card-bg"></div><div class="card-overlay"></div><div class="card-content"><h3 data-i18n="archives.photography.title">摄影作品</h3></div></a>
+                    <a class="project-card project-card--architecture" href="architect.html"><div class="card-bg"></div><div class="card-overlay"></div><div class="card-content"><h3 data-i18n="archives.architecture.title">建筑设计</h3></div></a>
+                    <a class="project-card project-card--uiux" href="index.html#projects"><div class="card-bg"></div><div class="card-overlay"></div><div class="card-content"><h3 data-i18n="archives.uiux.title">交互设计</h3></div></a>
+                </div>
+            </section>
+            <section class="sg-section" id="components" aria-labelledby="components-title">
+                <div class="sg-heading"><span class="sg-number">05</span><h2 id="components-title" data-i18n="guide.components">内容组件</h2></div>
+                <p class="sg-intro" data-i18n="guide.componentsIntro">从作品档案到工具目录，复用相同的字体、间距和信息秩序。</p>
+                <article class="arch-project-card"><button class="arch-project-trigger" type="button" data-open-gallery aria-label="打开安西织渔馆画廊样例" data-i18n-aria-label="guide.openGallery"></button><figure class="card-image-wrapper"><img src="assets/arch/004/pic/01.jpg" width="800" height="500" loading="lazy" alt="安西织渔馆项目封面" data-i18n-alt="guide.project1.alt"></figure><div class="card-info"><div class="arch-card-heading"><span class="arch-card-index">01</span><h3 data-i18n="guide.project1.title" class="arch-card-title">安西织渔馆</h3></div><p data-i18n="guide.project1.subtitle" class="arch-card-subtitle">乡村聚落建筑保护与更新设计</p><dl class="arch-card-grid"><dt class="arch-card-label" data-i18n="project.field.time">项目时间</dt><dd data-i18n="guide.project1.time" class="arch-card-value">2024.09–2025.10</dd><dt class="arch-card-label" data-i18n="project.field.location">位置地点</dt><dd data-i18n="guide.project1.location" class="arch-card-value">中国·成都市·新津区</dd><dt class="arch-card-label" data-i18n="project.field.type">功能类型</dt><dd data-i18n="guide.project1.type" class="arch-card-value">文化建筑 / 博物馆</dd><dt class="arch-card-label" data-i18n="project.field.area">建筑面积</dt><dd data-i18n="guide.project1.area" class="arch-card-value">2,232 m²</dd></dl><span class="more-btn" aria-hidden="true" data-i18n="project.more">更多 +</span></div></article>
+<article class="arch-project-card"><a class="arch-project-trigger" href="architect.html?project=001" aria-label="查看项目：纸韵书间" data-i18n-aria-label="guide.project2.open"></a><figure class="card-image-wrapper"><img src="assets/arch/001/pic/01.jpg" width="800" height="500" loading="lazy" alt="纸韵书间项目封面" data-i18n-alt="guide.project2.alt"></figure><div class="card-info"><div class="arch-card-heading"><span class="arch-card-index">02</span><h3 data-i18n="guide.project2.title" class="arch-card-title">纸韵书间</h3></div><p data-i18n="guide.project2.subtitle" class="arch-card-subtitle">四川大学理科图书馆设计</p><dl class="arch-card-grid"><dt class="arch-card-label" data-i18n="project.field.time">项目时间</dt><dd data-i18n="guide.project2.time" class="arch-card-value">2024.10–2025.01</dd><dt class="arch-card-label" data-i18n="project.field.location">位置地点</dt><dd data-i18n="guide.project2.location" class="arch-card-value">中国·成都市·武侯区</dd><dt class="arch-card-label" data-i18n="project.field.type">功能类型</dt><dd data-i18n="guide.project2.type" class="arch-card-value">公共建筑 / 学校</dd><dt class="arch-card-label" data-i18n="project.field.area">建筑面积</dt><dd data-i18n="guide.project2.area" class="arch-card-value">9,300 m²</dd></dl><span class="more-btn" aria-hidden="true" data-i18n="project.more">更多 +</span></div></article>
+                <section class="resume-section" id="sg-resume">
+                <div class="resume-container">
+                    <!-- Education -->
+                    <div class="resume-column">
+                        <h3 class="column-title" data-i18n="education.title">教育经历</h3>
+                        <hr class="column-divider">
+
+                        <div class="resume-item">
+                            <h4 class="item-title" data-i18n="education.scu.name">四川大学</h4>
+                            <p class="item-desc"><span data-i18n="education.scu.degree">建筑学学士</span><br><span
+                                    data-i18n="education.scu.period">2022–2027</span></p>
+                        </div>
+
+                        <div class="resume-item">
+                            <h4 class="item-title" data-i18n="education.pku.name">北京大学附属中学</h4>
+                            <p class="item-desc" data-i18n="education.pku.period">2016–2022</p>
+                        </div>
+                    </div>
+
+                    <!-- Prize -->
+                    <div class="resume-column">
+                        <h3 class="column-title" data-i18n="awards.title">荣誉奖项</h3>
+                        <hr class="column-divider">
+
+                        <ul class="awards-showcase">
+                            <li class="award-entry award-entry--scholarship">
+                                <div class="award-meta">
+                                    <span class="award-number">01</span>
+                                    <time datetime="2025-12">2025.12</time>
+                                </div>
+                                <div class="award-content">
+                                    <p class="award-kicker" data-i18n="awards.scholarship.kicker">学术荣誉</p>
+                                    <h4 class="award-title" data-i18n="awards.national.name">国家奖学金</h4>
+                                    <p class="award-description" data-i18n="awards.national.level">本科生国家奖学金</p>
+                                </div>
+                            </li>
+                            <li class="award-entry award-entry--work">
+                                <div class="award-meta">
+                                    <span class="award-number">02</span>
+                                    <time datetime="2025-08">2025.08</time>
+                                </div>
+                                <div class="award-content">
+                                    <p class="award-kicker" data-i18n="awards.work.kicker">获奖作品</p>
+                                    <h4 class="award-title"><a href="architect.html?project=004"
+                                            data-i18n="awards.anxi.title">安西织渔馆</a></h4>
+                                    <p class="award-competition" data-i18n="awards.future.name">未来设计师 · 全国高校数字艺术设计大赛</p>
+                                    <ul class="award-results" aria-label="获奖等级"
+                                        data-i18n-aria-label="awards.results.label">
+                                        <li>
+                                            <span data-i18n="awards.scope.national">国家赛</span>
+                                            <strong data-i18n="awards.level.first">一等奖</strong>
+                                        </li>
+                                        <li>
+                                            <span data-i18n="awards.scope.sichuan">四川省赛</span>
+                                            <strong data-i18n="awards.level.first">一等奖</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="award-entry award-entry--work">
+                                <div class="award-meta">
+                                    <span class="award-number">03</span>
+                                    <time datetime="2025-08">2025.08</time>
+                                </div>
+                                <div class="award-content">
+                                    <p class="award-kicker" data-i18n="awards.work.kicker">获奖作品</p>
+                                    <h4 class="award-title" data-i18n="awards.jingfang.title">井坊里</h4>
+                                    <p class="award-competition" data-i18n="awards.future.name">未来设计师 · 全国高校数字艺术设计大赛</p>
+                                    <ul class="award-results" aria-label="获奖等级"
+                                        data-i18n-aria-label="awards.results.label">
+                                        <li>
+                                            <span data-i18n="awards.scope.national">国家赛</span>
+                                            <strong data-i18n="awards.level.third">三等奖</strong>
+                                        </li>
+                                        <li>
+                                            <span data-i18n="awards.scope.sichuan">四川省赛</span>
+                                            <strong data-i18n="awards.level.first">一等奖</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+                <article class="tool-card">
+                <div class="tool-card-visual tool-card-visual--antimap" aria-hidden="true">
+                    <span class="tool-card-index">01</span>
+                    <span class="tool-card-mark">AM</span>
+                    <span class="tool-card-visual-label">FIELD / FORM / MAP</span>
+                </div>
+                <div class="tool-card-content">
+                    <div class="tool-card-meta">
+                        <span data-i18n="tools.webApp">WEB APP</span>
+                        <span class="tool-card-status" data-i18n="tools.live">LIVE</span>
+                    </div>
+                    <h3 lang="en">AntiMap</h3>
+                    <p class="tool-card-subtitle" data-i18n="tools.antimap.subtitle">建筑前期分析与概念制图工具集</p>
+                    <p class="tool-card-description" data-i18n="tools.antimap.description">面向建筑、规划与景观设计的浏览器端工作台。覆盖场地数据分析、策略图、泡泡图、体块演变、平剖面渲染和作品集排版，让“场地到图板”的工作流集中在一个入口。</p>
+                    <ul class="tool-card-tags" aria-label="项目标签" data-i18n-aria-label="tools.tags">
+                        <li data-i18n="tools.antimap.tag1">场地分析</li>
+                        <li data-i18n="tools.antimap.tag2">概念制图</li>
+                        <li>GIS</li>
+                    </ul>
+                    <div class="tool-card-actions">
+                        <a class="tool-link tool-link--primary" href="https://orsonkrennlc.github.io/Architecture-analysis/"
+                            target="_blank" rel="noopener noreferrer" aria-label="打开 AntiMap 应用"
+                            data-i18n-aria-label="tools.antimap.openLabel">
+                            <span data-i18n="tools.openApp">打开应用</span><span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="tool-link" href="https://github.com/OrsonKrennlc/Architecture-analysis"
+                            target="_blank" rel="noopener noreferrer" aria-label="查看 AntiMap GitHub 仓库"
+                            data-i18n-aria-label="tools.antimap.repoLabel">
+                            <span data-i18n="tools.viewSource">查看源码</span><span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+<article class="tool-card">
+                <div class="tool-card-visual tool-card-visual--perler" aria-hidden="true">
+                    <span class="tool-card-index">02</span>
+                    <span class="tool-card-mark">PB</span>
+                    <span class="tool-card-visual-label">PIXEL / COLOR / CRAFT</span>
+                </div>
+                <div class="tool-card-content">
+                    <div class="tool-card-meta">
+                        <span data-i18n="tools.webApp">WEB APP</span>
+                        <span class="tool-card-status" data-i18n="tools.live">LIVE</span>
+                    </div>
+                    <h3 lang="en">MARD 221 Palette</h3>
+                    <p class="tool-card-subtitle" data-i18n="tools.perler.subtitle">在线拼豆图纸生成器</p>
+                    <p class="tool-card-description" data-i18n="tools.perler.description">基于 MARD 221 色卡的在线拼豆图纸生成器。上传图片后可以进行色彩匹配、抖动、颗粒高亮与尺寸调整，并导出 PNG 图纸和 CSV 材料清单。</p>
+                    <ul class="tool-card-tags" aria-label="项目标签" data-i18n-aria-label="tools.tags">
+                        <li data-i18n="tools.perler.tag1">像素艺术</li>
+                        <li data-i18n="tools.perler.tag2">色彩匹配</li>
+                        <li data-i18n="tools.perler.tag3">图纸导出</li>
+                    </ul>
+                    <div class="tool-card-actions">
+                        <a class="tool-link tool-link--primary" href="https://orsonkrennlc.github.io/perler-beed-palette/"
+                            target="_blank" rel="noopener noreferrer" aria-label="打开 MARD 221 Palette 应用"
+                            data-i18n-aria-label="tools.perler.openLabel">
+                            <span data-i18n="tools.openApp">打开应用</span><span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="tool-link" href="https://github.com/OrsonKrennlc/perler-beed-palette"
+                            target="_blank" rel="noopener noreferrer" aria-label="查看 MARD 221 Palette GitHub 仓库"
+                            data-i18n-aria-label="tools.perler.repoLabel">
+                            <span data-i18n="tools.viewSource">查看源码</span><span aria-hidden="true">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            </section>
+            <section class="sg-section" id="controls" aria-labelledby="controls-title">
+                <div class="sg-heading"><span class="sg-number">06</span><h2 id="controls-title" data-i18n="guide.controls">控件与状态</h2></div>
+                <p class="sg-intro" data-i18n="guide.controlsIntro">交互状态可辨认，表单是延续现有语言的补充样例。</p>
+                <div class="sg-actions"><button class="tool-link tool-link--primary" type="button" data-open-gallery data-i18n="guide.dialogAction">打开画廊</button><a class="tool-link" href="docs/STYLE_GUIDE.md" data-i18n="guide.secondary">阅读说明</a><button class="tool-link" type="button" disabled data-i18n="guide.disabled">暂不可用</button></div>
+                <div class="sg-states"><div><p data-i18n="guide.state.default" class="sg-note">默认</p><span class="sg-state sg-state--default"><span data-i18n="guide.specimen" >状态样本</span></span></div><div><p data-i18n="guide.state.hover" class="sg-note">悬停</p><span class="sg-state sg-state--hover"><span data-i18n="guide.specimen" >状态样本</span></span></div><div><p data-i18n="guide.state.focus" class="sg-note">键盘焦点</p><span class="sg-state sg-state--focus"><span data-i18n="guide.specimen" >状态样本</span></span></div><div><p data-i18n="guide.state.active" class="sg-note">按下</p><span class="sg-state sg-state--active"><span data-i18n="guide.specimen" >状态样本</span></span></div><div><p data-i18n="guide.state.disabled" class="sg-note">禁用</p><span class="sg-state sg-state--disabled"><span data-i18n="guide.specimen" >状态样本</span></span></div></div>
+                <p class="sg-note" data-i18n="guide.stateNote">五种状态样本为静态对照；可用 Tab 聚焦真实按钮，或用鼠标悬停查看反馈。</p>
+                <div class="sg-form-layout">
+                    <form class="sg-form" id="guide-form" novalidate>
+                        <h3 data-i18n="guide.formTitle">本地表单演示</h3><p class="sg-note" data-i18n="guide.formNote">仅演示验证与反馈，不发送或保存内容。带 * 的字段必填。</p>
+                        <label for="guide-name" data-i18n="guide.name">称呼 *</label><input id="guide-name" name="name" autocomplete="name" required maxlength="80" aria-describedby="name-error"><p class="sg-field-error" id="name-error" hidden data-i18n="guide.nameError">请填写称呼。</p>
+                        <label for="guide-topic" data-i18n="guide.topic">关注方向</label><select id="guide-topic" name="topic"><option value="architecture" data-i18n="nav.architecture">建筑</option><option value="photography" data-i18n="nav.photography">摄影</option><option value="uiux" data-i18n="nav.uiux">交互</option></select>
+                        <label for="guide-message" data-i18n="guide.message">留言（选填）</label><textarea id="guide-message" name="message" rows="3" maxlength="500"></textarea>
+                        <label class="sg-check"><input type="checkbox" id="guide-copy"><span data-i18n="guide.check">我已了解这是本地交互演示</span></label>
+                        <button class="tool-link tool-link--primary" type="submit" data-i18n="guide.validate">验证样例</button><p class="sg-result" id="guide-result" role="status"></p>
+                    </form>
+                    <div class="sg-feedback"><h3 data-i18n="guide.feedback">信息反馈</h3>
+                        <div class="sg-message"><strong data-i18n="guide.loading">加载中</strong><p data-i18n="guide.loadingBody">正在读取项目资料。</p></div>
+                        <div class="sg-message"><strong data-i18n="guide.empty">暂无内容</strong><p data-i18n="guide.emptyBody">尚未添加图片，可先阅读项目说明。</p></div>
+                        <div class="sg-message sg-message--error"><strong data-i18n="guide.error">加载失败</strong><p data-i18n="guide.errorBody">地图暂时不可用，仍可通过项目索引浏览。</p></div>
+                        <div class="sg-message sg-message--success"><strong data-i18n="guide.success">操作完成</strong><p data-i18n="guide.successBody">样例验证已通过。</p></div>
+                    </div>
+                </div>
+            </section>
+            <section class="sg-section" id="interaction" aria-labelledby="interaction-title">
+                <div class="sg-heading"><span class="sg-number">07</span><h2 id="interaction-title" data-i18n="guide.interaction">交互与画廊</h2></div>
+                <p class="sg-intro" data-i18n="guide.interactionIntro">展开、定位、查看全图。用清晰的反馈连接每一步。</p>
+                <div class="sg-interaction-grid"><div><details class="sg-details"><summary data-i18n="guide.quick">展开样例快捷索引</summary><div><a href="#components" data-i18n="guide.jumpComponents">01 / 内容组件</a><a href="#controls" data-i18n="guide.jumpControls">02 / 控件与状态</a></div></details><p class="sg-note" data-i18n="guide.mapNote">右侧为地图标记与预览的样式示意，不代表实际位置。点击标记查看双图画廊。</p><a class="sg-text-link" href="architect.html" data-i18n="guide.realMap">打开真实项目地图 ↗</a></div>
+                    <div class="sg-map"><p class="sg-map-label" data-i18n="guide.mapLabel">地图样式示意 · 非地理底图</p><button class="sg-map-point" type="button" data-open-gallery aria-label="打开安西织渔馆画廊样例" data-i18n-aria-label="guide.openGallery"><span class="sg-pin" aria-hidden="true"></span></button><div class="sg-map-preview" aria-hidden="true"><img src="assets/arch/004/pic/01.jpg" width="240" height="150" alt="" loading="lazy"><span data-i18n="awards.anxi.title">安西织渔馆</span></div></div>
+                </div>
+            </section>
+            <section class="sg-section" id="web" aria-labelledby="web-title">
+                <div class="sg-heading"><span class="sg-number">08</span><h2 id="web-title" data-i18n="guide.web">Web 设计要求</h2></div>
+                <p class="sg-intro" data-i18n="guide.webIntro">视觉一致，也要让每个人能够阅读和操作。</p>
+                <div class="sg-web-grid">
+                    <article><h3 data-i18n="guide.semantics">语义清楚</h3><p data-i18n="guide.semanticsBody">一个主标题，完整的章节与页面地标。按钮执行动作，链接负责导航。</p></article>
+                    <article><h3 data-i18n="guide.keyboard">键盘可达</h3><p data-i18n="guide.keyboardBody">Tab 顺序可预期，焦点清晰。弹窗支持 Esc，关闭后返回触发位置。</p></article>
+                    <article><h3 data-i18n="guide.contrast">文字可读</h3><p data-i18n="guide.contrastBody">普通文本至少 4.5:1。重要边界至少 3:1，主要操作区域不小于 44 × 44px。</p></article>
+                    <article><h3 data-i18n="guide.responsive">小屏重排</h3><p data-i18n="guide.responsiveBody">窄屏与文字放大时自然换行。减少动态效果偏好下关闭非必要运动。</p></article>
+                </div>
+                <p class="sg-note" data-i18n="guide.scope">本页按 WCAG 2.2 AA 相关要求实现；这是样例与检查依据，不代表全站认证。</p>
+                <div class="sg-reference-links"><a href="https://www.w3.org/WAI/WCAG22/quickref/" lang="en">W3C / WCAG 2.2 ↗</a><a href="#main" data-i18n="guide.back">返回顶部 ↑</a></div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-left" data-i18n="footer.made">Junyang 用 ❤️ 制作</div>
+        <div class="footer-center" data-i18n="footer.copyright">© 2026 Orson Krennic。保留所有权利。</div>
+        <div class="footer-right" data-i18n="footer.powered">由 Chimi 的爱💗 与 GitHub Pages 驱动</div>
+    </footer>
+    <dialog id="guide-dialog" class="sg-dialog" aria-labelledby="gallery-title">
+        <div class="sg-dialog-inner"><button class="sg-dialog-close" type="button" data-close-gallery aria-label="关闭项目详情" data-i18n-aria-label="modal.close">×</button>
+            <p class="sg-note" data-i18n="guide.galleryLabel">画廊交互样例 · 两张图片</p><h2 id="gallery-title" data-i18n="awards.anxi.title">安西织渔馆</h2>
+            <figure class="sg-gallery"><img id="guide-gallery-image" src="assets/arch/004/pic/01.jpg" width="1200" height="750" alt="安西织渔馆，项目图片 1 / 2"></figure>
+            <div class="gallery-controls"><p id="guide-gallery-counter" role="status">01 / 02</p><div class="gallery-dots"><button class="dot active" type="button" data-slide="0" aria-current="true" aria-label="查看第 1 张图片" data-i18n-aria-label="guide.slide1"></button><button class="dot" type="button" data-slide="1" aria-label="查看第 2 张图片" data-i18n-aria-label="guide.slide2"></button></div><div class="gallery-arrows"><button type="button" data-gallery-prev aria-label="上一张项目图片" data-i18n-aria-label="gallery.previous">←</button><button type="button" data-gallery-next aria-label="下一张项目图片" data-i18n-aria-label="gallery.next">→</button></div></div>
+            <p class="sg-note" data-i18n="guide.galleryNote">列表封面可以裁切，详情图保持完整。使用方向键或按钮翻页。</p>
+        </div>
+    </dialog>
+    <script src="js/i18n.js" defer></script><script src="js/site-header.js" defer></script><script src="js/style-guide.js" defer></script>
+</body>
+</html>

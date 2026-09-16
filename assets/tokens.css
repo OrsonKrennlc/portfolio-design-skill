@@ -1,0 +1,81 @@
+/* Optional seed for new pages. Map to existing tokens before adopting.
+   Font families require project-managed font loading. No reset or components. */
+:root {
+  --pf-color-canvas: #ffffff;
+  --pf-color-ink: #000000;
+  --pf-color-brand: #02542d;
+  --pf-color-muted: #676767;
+  --pf-color-rule: #eaeaea;
+  --pf-color-on-dark: #ffffff;
+  --pf-color-on-dark-muted: #d0d0d0;
+  --pf-color-board: #f6f6f3;
+
+  --pf-font-zh: "Noto Serif SC", "Songti SC", "STSong", serif;
+  --pf-font-en: "Anonymous Pro", "Courier New", monospace;
+  --pf-font-signature: "Caveat", cursive;
+  --pf-font-tibetan: "Noto Serif Tibetan", serif;
+
+  --pf-content-max: 1200px;
+  --pf-text-max: 720px;
+  --pf-page-gutter: clamp(50px, 7.8vw, 150px);
+  --pf-header-height: 100px;
+  --pf-section-title: 48px;
+  --pf-project-title: 32px;
+  --pf-body-size: 16px;
+  --pf-meta-size: 14px;
+  --pf-body-leading: 1.8;
+  --pf-section-space: clamp(80px, 8vw, 150px);
+  --pf-component-gap: 40px;
+
+  --pf-space-4: 4px;
+  --pf-space-8: 8px;
+  --pf-space-12: 12px;
+  --pf-space-16: 16px;
+  --pf-space-20: 20px;
+  --pf-space-24: 24px;
+  --pf-space-32: 32px;
+  --pf-space-40: 40px;
+  --pf-space-48: 48px;
+  --pf-space-60: 60px;
+  --pf-space-80: 80px;
+  --pf-space-100: 100px;
+  --pf-space-120: 120px;
+  --pf-space-150: 150px;
+
+  --pf-radius-image: 4px;
+  --pf-radius-map: 16px;
+  --pf-radius-dialog: 16px;
+  --pf-shadow-hover: 0 15px 40px rgb(0 0 0 / 10%);
+  --pf-shadow-dialog: 0 20px 50px rgb(0 0 0 / 20%);
+  --pf-target-min: 44px;
+
+  --pf-motion-fast: 150ms;
+  --pf-motion-standard: 300ms;
+  --pf-motion-slow: 500ms;
+  --pf-ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+@media (max-width: 1199px) {
+  :root { --pf-page-gutter: 50px; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pf-page-gutter: 20px;
+    --pf-header-height: 72px;
+    --pf-section-title: 32px;
+    --pf-project-title: 26px;
+    --pf-component-gap: 24px;
+    --pf-radius-map: 12px;
+    --pf-radius-dialog: 0px;
+  }
+}
+
+/* Components must also disable nonessential animation and smooth scrolling. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --pf-motion-fast: 0ms;
+    --pf-motion-standard: 0ms;
+    --pf-motion-slow: 0ms;
+  }
+}
